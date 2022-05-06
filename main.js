@@ -12,8 +12,8 @@ function calcular(tipo, valor) {
         }
 
         if (valor === '=') {
-            var valor_campo = document.getElementById('resultado').value;
-            console.log(valor_campo);
+            var valor_campo = eval(document.getElementById('resultado').value); // eval processa a string no contexto do intepretador do javascript
+            document.getElementById('resultado').value = valor_campo;
         }
     }
     else if (tipo == 'valor') {
